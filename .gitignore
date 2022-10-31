@@ -130,8 +130,12 @@ dmypy.json
 
 # robot
 results/
+doc/
 
 # IDE
 .vscode/
 .idea/
 .pycharm/
+
+# mac
+.DS_Store
