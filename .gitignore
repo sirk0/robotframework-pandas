@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# robot
+results/
+
+# IDE
+.vscode/
+.idea/
+.pycharm/
