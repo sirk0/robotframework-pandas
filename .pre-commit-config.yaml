@@ -3,3 +3,7 @@ repos:
     rev: 22.10.0
     hooks:
     -   id: black
+-   repo: https://github.com/MarketSquare/robotframework-tidy
+    rev: 3.3.2
+    hooks:
+    -   id: robotidy
