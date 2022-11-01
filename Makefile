@@ -15,6 +15,18 @@ format:  ## Run pre-commit formatters and linters.
 init:  ## Initialise repo. Run this command only once.
 	pre-commit install
 
+.PHONY: install
+install:  ## Install this package.
+	pip install .
+
+.PHONY: package
+package:  ## Package project installation.
+	python3 setup.py sdist bdist_wheel
+
 .PHONY: test
 test:  ## Run robot tests.
 	robot --outputdir results/ tests/
+
+.PHONY: uninstall
+uninstall:  ## Uninstall this package.
+	pip uninstall robotframework-pandas
