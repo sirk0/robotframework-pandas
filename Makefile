@@ -5,7 +5,7 @@ help:  ## Show this help.
 
 .PHONY: clean
 clean:  ## Clean generated files.
-	rm -rvf build dist doc results
+	rm -rvf build dist doc results *.egg-info
 
 .PHONY: doc
 doc:  ## Generate robot documentation.
