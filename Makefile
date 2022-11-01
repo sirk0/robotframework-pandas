@@ -3,6 +3,10 @@ help:  ## Show this help.
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort\
 	  | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
+.PHONY: clean
+clean:  ## Clean generated files.
+	rm -rvf build dist doc results
+
 .PHONY: doc
 doc:  ## Generate robot documentation.
 	python -m robot.libdoc PandasLibrary/ doc/PandasLibrary.html
@@ -29,4 +33,4 @@ test:  ## Run robot tests.
 
 .PHONY: uninstall
 uninstall:  ## Uninstall this package.
-	pip uninstall robotframework-pandas
+	pip uninstall --yes robotframework-pandas
