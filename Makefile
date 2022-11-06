@@ -7,7 +7,6 @@ help:  ## Show this help.
 clean:  ## Clean generated files.
 	rm -rvf build dist doc results *.egg-info
 
-.PHONY: doc
 doc:  ## Generate robot documentation.
 	python -m robot.libdoc PandasLibrary/ doc/PandasLibrary.html
 
@@ -26,6 +25,10 @@ install:  ## Install this package.
 .PHONY: package
 package:  ## Package project installation.
 	python3 setup.py sdist bdist_wheel
+
+.PHONY: report
+report:  ## Open last HTML test report.
+	open results/report.html
 
 .PHONY: test
 test:  ## Run robot tests.

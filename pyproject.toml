@@ -21,10 +21,15 @@ classifiers = [
 ]
 dependencies = ["robotframework", "pandas"]
 keywords = ["testing", "robotframework", "pandas"]
+# packages =  ["PandasLibrary"]
+# package-dir = { robotframework-pandas = "PandasLibrary" }
 
 [project.urls]
 "Homepage" = "https://github.com/sirk0/robotframework-pandas"
 "Bug Tracker" = "https://github.com/sirk0/robotframework-pandas/issues"
+
+[tool.setuptools.packages.find]
+where = ["PandasLibrary"]
 
 [tool.isort]
 profile = "black"
