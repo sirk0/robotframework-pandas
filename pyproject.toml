@@ -13,11 +13,11 @@ readme = "README.md"
 requires-python = ">=3.7"
 classifiers = [
   "Development Status :: 5 - Production/Stable",
-  "Framework :: Robot Framework :: Library",
   "Intended Audience :: Developers",
+  "Topic :: Software Development :: Testing",
   "License :: Public Domain",
   "Programming Language :: Python :: 3",
-  "Topic :: Software Development :: Testing",
+  "Framework :: Robot Framework :: Library",
 ]
 dependencies = ["robotframework", "pandas"]
 keywords = ["testing", "robotframework", "pandas"]
