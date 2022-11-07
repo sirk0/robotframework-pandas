@@ -28,8 +28,5 @@ keywords = ["testing", "robotframework", "pandas"]
 "Homepage" = "https://github.com/sirk0/robotframework-pandas"
 "Bug Tracker" = "https://github.com/sirk0/robotframework-pandas/issues"
 
-[tool.setuptools.packages.find]
-where = ["PandasLibrary"]
-
 [tool.isort]
 profile = "black"
