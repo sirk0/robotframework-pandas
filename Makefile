@@ -5,10 +5,10 @@ help:  ## Show this help.
 
 .PHONY: clean
 clean:  ## Clean generated files.
-	rm -rvf build dist doc results *.egg-info
+	rm -rvf build dist doc results src/*.egg-info
 
 doc:  ## Generate robot documentation.
-	python -m robot.libdoc PandasLibrary/ doc/PandasLibrary.html
+	python -m robot.libdoc src/PandasLibrary/ doc/PandasLibrary.html
 
 .PHONY: format
 format:  ## Run pre-commit formatters and linters.
