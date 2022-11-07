@@ -3,6 +3,10 @@ help:  ## Show this help.
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort\
 	  | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
+.PHONY: build
+build:  ## Package project installation.
+	python -m build
+
 .PHONY: clean
 clean:  ## Clean generated files.
 	rm -rvf build dist doc results src/*.egg-info
@@ -21,10 +25,6 @@ init:  ## Initialise repo. Run this command only once.
 .PHONY: install
 install:  ## Install this package.
 	pip install .
-
-.PHONY: package
-package:  ## Package project installation.
-	python3 setup.py sdist bdist_wheel
 
 .PHONY: report
 report:  ## Open last HTML test report.
