@@ -12,17 +12,15 @@ description = "robotframework-pandas is a Robot Framework test library for worki
 readme = "README.md"
 requires-python = ">=3.7"
 classifiers = [
-        "Development Status :: 5 - Production/Stable",
-        "Intended Audience :: Developers",
-        "Topic :: Software Development :: Testing",
-        "License :: Public Domain",
-        "Programming Language :: Python :: 3",
-        "Framework :: Robot Framework :: Library",
+  "Development Status :: 5 - Production/Stable",
+  "Framework :: Robot Framework :: Library",
+  "Intended Audience :: Developers",
+  "License :: Public Domain",
+  "Programming Language :: Python :: 3",
+  "Topic :: Software Development :: Testing",
 ]
 dependencies = ["robotframework", "pandas"]
 keywords = ["testing", "robotframework", "pandas"]
-# packages =  ["PandasLibrary"]
-# package-dir = { robotframework-pandas = "PandasLibrary" }
 
 [project.urls]
 "Homepage" = "https://github.com/sirk0/robotframework-pandas"
