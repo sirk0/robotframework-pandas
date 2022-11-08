@@ -4,7 +4,6 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "robotframework-pandas"
-version = "0.0.1"
 authors = [
   { name="Sergii Tsymbal", email="tcymbal@gmail.com" },
 ]
@@ -21,6 +20,7 @@ classifiers = [
 ]
 dependencies = ["robotframework", "pandas"]
 keywords = ["testing", "robotframework", "pandas"]
+dynamic = ["version"]
 
 [project.urls]
 "Homepage" = "https://github.com/sirk0/robotframework-pandas"
