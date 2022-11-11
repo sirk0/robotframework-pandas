@@ -1,5 +1,5 @@
 *** Settings ***
-Library     ../PandasLibrary/
+Library     PandasLibrary
 
 
 *** Test Cases ***

@@ -1,2 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robotframework-pandas"
+authors = [
+  { name="Sergii Tsymbal", email="tcymbal@gmail.com" },
+]
+description = "robotframework-pandas is a Robot Framework test library for working with pandas objects"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Testing",
+  "License :: Public Domain",
+  "Programming Language :: Python :: 3",
+  "Framework :: Robot Framework :: Library",
+]
+dependencies = ["robotframework", "pandas"]
+keywords = ["testing", "robotframework", "pandas"]
+version = "0.0.1"
+
+[project.urls]
+"Homepage" = "https://github.com/sirk0/robotframework-pandas"
+"Bug Tracker" = "https://github.com/sirk0/robotframework-pandas/issues"
+
 [tool.isort]
 profile = "black"
