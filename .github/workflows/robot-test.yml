@@ -15,7 +15,8 @@ jobs:
         python-version: '3.10'
     - name: Install deps
       run: |
-        pip install -Ur requirements.txt
+        make clean build
+        pip install dist/robotframework_pandas-*.whl
     - name: Run robot tests
       run: |
         make test
