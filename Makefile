@@ -13,6 +13,7 @@ build:  ## Package project installation.
 clean:  ## Clean generated files.
 	rm -rvf build dist doc results src/*.egg-info
 
+.PHONY: doc
 doc:  ## Generate robot documentation.
 	python -m robot.libdoc --version="$(VERSION)" src/PandasLibrary/ doc/PandasLibrary.html
 
