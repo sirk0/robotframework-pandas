@@ -7,17 +7,36 @@ on:
 
 jobs:
   robot-test:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+        python: ['3.9', '3.10', '3.11']
+        robot: ['robotframework==4.*', 'robotframework==5.*', 'robotframework']
+        pandas: ['pandas==1.0.*', 'pandas==1.4.*', 'pandas']
+        include:
+          - os: windows-latest
+            python: '3.9'
+            robot: 'robotframework==4.*'
+            pandas: 'pandas==1.0.*'
+          - os: macos-latest
+            python: '3.10'
+            robot: 'robotframework==5.*'
+            pandas: 'pandas==1.4.*'
+          - os: ubuntu-latest
+            python: '3.11'
+            robot: 'robotframework'
+            pandas: 'pandas'
+    runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-python@v3
       with:
-        python-version: '3.10'
+        python-version: ${{ matrix.python }}
     - name: Install deps
       run: |
         pip install build
         make clean build
-        pip install dist/robotframework_pandas-*.whl
+        pip install "${{ matrix.robot }}" "${{ matrix.pandas }}" dist/robotframework_pandas-*.whl
     - name: Run robot tests
       run: |
         make test
