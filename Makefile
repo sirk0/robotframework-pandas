@@ -7,7 +7,7 @@ help:  ## Show this help.
 
 .PHONY: build
 build:  ## Package project installation.
-	python -m build
+	python -m build --outputdir ./dist
 
 .PHONY: clean
 clean:  ## Clean generated files.
