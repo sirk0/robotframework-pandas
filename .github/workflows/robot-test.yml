@@ -9,10 +9,10 @@ jobs:
   robot-test:
     strategy:
       matrix:
-        os: [windows-latest, macos-latest, ubuntu-latest]
-        python: ['3.9', '3.10', '3.11']
-        robot: ['robotframework==4.*', 'robotframework==5.*', 'robotframework']
-        pandas: ['pandas==1.0.*', 'pandas==1.4.*', 'pandas']
+        # os: [windows-latest, macos-latest, ubuntu-latest]
+        # python: ['3.9', '3.10', '3.11']
+        # robot: ['robotframework==4.*', 'robotframework==5.*', 'robotframework']
+        # pandas: ['pandas==1.0.*', 'pandas==1.4.*', 'pandas']
         include:
           - os: windows-latest
             python: '3.9'
