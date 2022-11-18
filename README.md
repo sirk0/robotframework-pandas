@@ -10,10 +10,6 @@ wrapping [Python Pandas Library](https://github.com/pandas-dev/pandas).
 pip install -i https://test.pypi.org/simple/ robotframework-pandas --pre
 ```
 
-## Documentation
-
-Documentation is here: <https://sirk0.github.io/robotframework-pandas/PandasLibrary.html>
-
 ## 🤖 Quick start
 
 ```robotframework
@@ -27,3 +23,14 @@ Test Series
     ${s}    Convert To Series    ${l}
     Should Be Equal As Integers    ${s.sum()}    6
 ```
+
+## 🤖 More examples
+
+### 📖 Keywords documentation
+
+Robotframework-pandas offers a wide set of keywords which can be found in the [Keywords documentation](
+    https://sirk0.github.io/robotframework-pandas/PandasLibrary.html)
+
+### 🔬 Test examples
+
+You can find many test examples inside the [tests](./tests/) folder.
