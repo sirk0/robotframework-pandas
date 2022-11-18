@@ -40,3 +40,7 @@ test:  ## Run robot tests.
 .PHONY: uninstall
 uninstall:  ## Uninstall this package.
 	pip uninstall --yes robotframework-pandas
+
+.PHONY: upload
+upload:  ## Upload the package to PyPI
+	twine upload dist/*
