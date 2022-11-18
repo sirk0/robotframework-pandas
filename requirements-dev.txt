@@ -1,2 +1,4 @@
--r requirements.txt
+--editable .
 build
+pre-commit
+twine

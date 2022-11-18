@@ -13,9 +13,9 @@ build:  ## Package project installation.
 clean:  ## Clean generated files.
 	rm -rvf build dist doc results src/*.egg-info
 
-.PHONY: doc
-doc:  ## Generate robot documentation.
-	python -m robot.libdoc --version="$(VERSION)" src/PandasLibrary/ doc/PandasLibrary.html
+.PHONY: docs
+docs:  ## Generate robot documentation.
+	python -m robot.libdoc --version="$(VERSION)" src/PandasLibrary/ docs/PandasLibrary.html
 
 .PHONY: format
 format:  ## Run pre-commit formatters and linters.
@@ -40,3 +40,7 @@ test:  ## Run robot tests.
 .PHONY: uninstall
 uninstall:  ## Uninstall this package.
 	pip uninstall --yes robotframework-pandas
+
+.PHONY: upload
+upload:  ## Upload the package to PyPI.
+	twine upload dist/*

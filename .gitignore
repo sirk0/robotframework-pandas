@@ -130,7 +130,6 @@ dmypy.json
 
 # robot
 results/
-doc/
 
 # IDE
 .vscode/
@@ -139,3 +138,6 @@ doc/
 
 # mac
 .DS_Store
+
+# temp
+uncommitted/
