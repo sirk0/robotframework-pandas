@@ -130,7 +130,6 @@ dmypy.json
 
 # robot
 results/
-doc/
 
 # IDE
 .vscode/
