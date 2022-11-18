@@ -4,6 +4,12 @@
 aimed to provide support of pandas data analysis toolkit,
 wrapping [Python Pandas Library](https://github.com/pandas-dev/pandas).
 
+## Install pre-release version
+
+```sh
+pip install -i https://test.pypi.org/simple/ robotframework-pandas --pre
+```
+
 ## Documentation
 
 Documentation is here: <https://sirk0.github.io/robotframework-pandas/PandasLibrary.html>
